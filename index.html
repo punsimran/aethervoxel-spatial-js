@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxel Spatial Workspace</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <!-- The Holographic HUD -->
+    <div id="controls-gui">
+        <div class="header">
+            <span class="pulse"></span>
+            <h3>SPATIAL WORKSPACE</h3>
+        </div>
+
+        <div class="section">
+            <div class="section-title">VIEW (Move Hand)</div>
+            <div class="control-item">
+                <span class="gesture">⬅️ Left / Right ➡️</span>
+                <span class="action">Rotate 360°</span>
+            </div>
+            <div class="control-item">
+                <span class="gesture">⬆️ Up / Down ⬇️</span>
+                <span class="action">Adjust Height</span>
+            </div>
+            <div class="control-item">
+                <span class="gesture">🔍 Forward / Back</span>
+                <span class="action">Zoom In / Out</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">BUILD</div>
+            <div class="control-item">
+                <span class="gesture">👌 Pinch Thumb+Index</span>
+                <span class="action">Place Block</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SYSTEM</div>
+            <div class="control-item">
+                <span class="gesture">✊ Tight Fist</span>
+                <span class="action">Clear All Blocks</span>
+            </div>
+        </div>
+
+        <hr>
+        <div id="status">
+            STATUS: <span id="pinch-indicator">CALIBRATING...</span>
+        </div>
+    </div>
+
+    <!-- Hidden Video Feed (Logic uses it, CSS hides it or places it in corner) -->
+    <video id="input_video"></video>
+    
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

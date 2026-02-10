@@ -1,0 +1,92 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: #000; 
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Orbitron gives it a sci-fi look */
+}
+
+/* THE HUD CONTAINER */
+#controls-gui {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 260px;
+    background: rgba(0, 15, 25, 0.85);
+    backdrop-filter: blur(8px);
+    color: #e0faff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 242, 255, 0.1);
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h3 { 
+    margin: 0; 
+    color: #00f2ff; 
+    font-size: 14px; 
+    letter-spacing: 2px; 
+}
+
+/* Red pulsing dot for "Live" feel */
+.pulse {
+    width: 8px;
+    height: 8px;
+    background: #ff0055;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #ff0055;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.section { margin-bottom: 18px; }
+
+.section-title {
+    font-size: 10px;
+    color: rgba(0, 242, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+    padding-bottom: 4px;
+}
+
+.control-item { margin-bottom: 10px; }
+
+.gesture { display: block; font-weight: bold; font-size: 13px; color: #fff; }
+.action { display: block; color: #9ababd; font-size: 11px; font-style: italic; }
+
+#status {
+    font-size: 11px;
+    color: #00f2ff;
+    font-weight: bold;
+}
+
+hr { border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 15px 0; }
+
+/* WEBCAM FEED IN CORNER */
+#input_video {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 242, 255, 0.5);
+    transform: scaleX(-1); /* Mirror effect */
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#input_video:hover { opacity: 1; }
